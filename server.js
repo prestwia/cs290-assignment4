@@ -52,6 +52,16 @@ var server = http.createServer(function(req, res) {
     res.write(js);
   }
   /* handle case to load 404.html or any other urls */
+  else if (req.url === 'public/404.html') {
+    /* load if not loaded before */
+    if (error === undefined) {
+      /* get data from file */
+      error = fs.readFileSync('public/404.html');
+    }
+    /* write data with 200 status */
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write(error);
+  }
   else {
     /* load if not loaded before */
     if (error === undefined) {
