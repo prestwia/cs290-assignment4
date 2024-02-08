@@ -1,6 +1,4 @@
 # Assignment 4
-**Assignment and Code Blog entry due at 11:59pm on Monday, 5/17/2021**<br />
-**This assignment will not be demoed.  It will be graded offline.**
 
 The goal of this assignment is to start to use Node.js and some of its built-in modules to build a very simple web server that serves static content.
 
@@ -49,38 +47,3 @@ Here are a few tips/hints to help you out with the assignment:
       npx serve ./public/
       ```
       Then, you can use URLs similar to the ones above to see the files from `public/` (note that serve runs on port 5000 by default).  This will give you an idea of what your own server should do.
-
-## Code Blog
-
-Add an entry to your Code Blog reflecting on your experience with this assignment.  Here are some questions you could answer (though these aren't the only ones):
-
-  * What was challenging about the assignment, and what specific kinds of problems did you have.  How did you solve those problems?
-
-  * What did you learn from the assignment?  Were there any special insights you had?  What did you find that you already knew?
-
-  * What kinds of resources were helpful for completing the assignment?  Specific websites?  Lectures?  The class Piazza forum?  The TAs?  How did you use each of these resources?
-
-  * What are one or two things you had to Google to complete the assignment?
-
-## Submission
-
-As always, we'll be using GitHub Classroom for this assignment, and you will submit your assignment via GitHub.  Just make sure your completed files are committed and pushed by the assignment's deadline to the master branch of the GitHub repo that was created for you by GitHub Classroom.  A good way to check whether your files are safely submitted is to look at the master/main branch your assignment repo on the github.com website (i.e. https://github.com/osu-cs290-sp21/assignment-4-YourGitHubUsername/). If your changes show up there, you can consider your files submitted.
-
-In addition to submitting your assignment via GitHub, you must submit the URL to your code blog entry (e.g. http://web.engr.oregonstate.edu/~YOUR_ONID_ID/cs290/blog.html) via Canvas by the due date specified above.
-
-## Grading criteria
-
-Only changes to `server.js` will be considered when grading this assignment.  Changes to other files will be ignored, though if you'd like, you can add the contents of your `index.js` from Assignment 3 to `public/index.js` to get the full effect of the assignment (your `index.js` won't actually be graded).  Note also that when grading, we will not run `npm install` to install third-party modules, so if you used third-party modules in your solution, it probably won't work, and you'll get a bad grade.
-
-The assignment is worth 100 points total:
-
-  * 15 points: server listens on the port specified by the environment variable `PORT` or 3000 by default.
-
-  * 40 points: server serves files from `public/` with status 200 and correct `Content-Type` header when corresponding URL path is visited.
-    * 10 points per file: 8 points for correctly serving file content and 2 points for correct `Content-Type` header and 200 status code
-
-  * 10 points: server serves `public/index.html` with status 200 when the root URL path (`/`) is visited.
-
-  * 20 points: server serves `public/404.html` with status 404 when a URL path not corresponding to any file in `public/` is visited.
-
-  * 15 points: server reads files in `public/` exactly once and stores them in memory for later use.
